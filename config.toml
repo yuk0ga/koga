@@ -1,5 +1,0 @@
-theme = "koga"
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "koga-theme"
-MetaDataFormat = "toml"
