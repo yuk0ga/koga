@@ -4,7 +4,7 @@
 name = "koga"
 license = "MIT"
 description = "theme for a personal website"
-tags = ["tags", "categories"]
+tags = ["minimal", "beginner"]
 min_version = "0.32.1"
 
 [author]

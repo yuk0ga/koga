@@ -1,10 +1,17 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-          <title>{{ .Title }}</title>
-    </head>
-    <body>
-          <h1>{{ .Title }}</h1>
-            {{ .Content }}
-    </body>
-</html>
+{{ define "main" }}
+<div class="single">
+  <div class="header">
+    <p class="lastmod">{{ .Date.Format "January 2, 2006" }}</p>
+    <h1 class="posttitle">{{ .Title }}</h1>
+  </div>
+  <div class="content">
+    {{ if and (gt .WordCount 200 ) (ne .Params.toc "false") }}
+      <div class="toc">
+          {{ .TableOfContents }}
+      </div>
+    {{ end }}
+    {{ .Content }}
+    <br>
+  </div>
+</div>
+{{ end }}

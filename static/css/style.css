@@ -1,0 +1,178 @@
+html {
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+a {text-decoration: none; color: #4ebf4a;}
+a:hover {text-decoration: underline; color: #555;}
+
+/* list.html */
+
+.lastmod, .postsummary {
+  margin: 2px 0;
+  font-size: 15px
+}
+
+.posttitle {
+  font-size: 30px;
+  margin: 0;
+}
+
+.card {
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 700px;
+}
+
+.card:hover {
+  background-color: #4ebf4a;
+}
+
+.card > a {text-decoration: none;}
+.card > a:visited { color:#000000 }
+.card > a:hover {
+  color: white;
+}
+
+/* single.html */
+
+.single {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.header {
+  margin: 20px auto;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  max-width: 700px;
+}
+
+.header > .posttitle {
+  font-size: 40px;
+}
+
+.content {
+  margin: 10px auto;
+  max-width: 700px;
+}
+
+/* Table of Contents */
+
+.toc {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.toc > nav > ul {
+  list-style-type: decimal;
+}
+
+.toc > nav > ul > li {
+  padding: 5px 0;
+}
+
+.toc > nav > ul > li > a {text-decoration: none; color: black;}
+.toc > nav > ul > li > a:visited {color: black;}
+.toc > nav > ul > li > a:hover {text-decoration: underline;}
+
+/* Subheadings */
+
+.content > h1 {
+  font-size: 25px;
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 5px solid #4ebf4a;
+  color: black;
+  /* padding: 10px;
+  background-color: #4ebf4a;
+  color: white; */
+}
+
+/* paragraphs */
+
+.content > p {
+  padding: 0 10px;
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+
+  body {
+    background-color: #4ebf4a;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* list.html */
+  .card {
+    margin: 10px 0;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  /* single.html */
+  .single {
+    background-color: white;
+  }
+  .header {
+    margin: 10px 10px 20px;
+    padding: 15px 10px;
+    border-bottom: 2px solid black;
+  }
+
+  .content {
+    margin: 10px 0;
+  }
+
+  .toc {
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+
+  .content > p, .content > h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .img-80 > img {
+    max-width: 100% !important;
+  }
+}
+
+/* images */
+
+.img-80 > img {
+  display: block;
+  margin: 30px auto 0;
+  max-width: 80%;
+  height: auto;
+  border: 2px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.img-80 > figcaption > h4 {
+  text-align: center;
+  font-weight: normal;
+  margin: 5px auto 30px;
+}
+
+/* code */
+pre > code {
+  background: #eee !important;
+  padding: 20px !important;
+  border-radius: 5px;
+}
+code > span {
+  font-family:"Source Code Pro";
+}
