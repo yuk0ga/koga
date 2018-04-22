@@ -25,9 +25,13 @@ a:hover {text-decoration: underline; color: #555;}
   border-bottom: 4px solid #4ebf4a;
 }
 
+.lastmod {
+  font-weight: bold;
+}
+
 .lastmod, .postsummary {
   margin: 2px 2px 0;
-  font-size: 15px
+  font-size: 15px;
 }
 
 .posttitle {
@@ -180,10 +184,16 @@ a:hover {text-decoration: underline; color: #555;}
   .single {
     background-color: white;
   }
+
   .header {
     margin: 10px 10px 20px;
     padding: 15px 10px;
     border-bottom: 2px solid black;
+  }
+
+  #tags, #categories {
+    display: block;
+    margin: 15px 0 0;
   }
 
   .content {
