@@ -131,11 +131,21 @@ Table of Contents
   border-radius: 5px;
 }
 
-.toc > nav > ul,
+/* list style for h1 */
+.toc > nav > ul {
+  list-style-type: none;
+}
+
+/* list style for h2, h3 */
 .toc > nav > ul > li > ul,
 .toc > nav > ul > li > ul > li > ul {
   list-style-type: decimal;
   padding-left: 30px;
+}
+
+/* list style for h4 */
+.toc > nav > ul > li > ul > li > ul > li > ul {
+  list-style-type: circle;
 }
 
 /* padding per h1 */
@@ -152,7 +162,8 @@ Table of Contents
 /* styling of all toc */
 .toc > nav > ul > li > a,
 .toc > nav > ul > li > ul > li > a,
-.toc > nav > ul > li > ul > li > ul > li > a {
+.toc > nav > ul > li > ul > li > ul > li > a,
+.toc > nav > ul > li > ul > li > ul > li > ul > li > a {
   text-decoration: none;
   color: black;
   padding: 3px;
@@ -160,11 +171,13 @@ Table of Contents
 }
 .toc > nav > ul > li > a:visited,
 .toc > nav > ul > li > ul > li > a:visited,
-.toc > nav > ul > li > ul > li > ul > li > a:visited {color: black;}
+.toc > nav > ul > li > ul > li > ul > li > a:visited,
+.toc > nav > ul > li > ul > li > ul > li > ul > li > a:visited {color: black;}
 
 .toc > nav > ul > li > a:hover,
 .toc > nav > ul > li > ul > li > a:hover,
-.toc > nav > ul > li > ul > li > ul > li > a:hover {text-decoration: underline; background-color: #eee;}
+.toc > nav > ul > li > ul > li > ul > li > a:hover,
+.toc > nav > ul > li > ul > li > ul > li > ul > li > a:hover {text-decoration: underline; background-color: #eee;}
 
 /*
 Subheadings
