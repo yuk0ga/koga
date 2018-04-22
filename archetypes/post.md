@@ -4,7 +4,7 @@ date = {{ .Date }}
 Description = ""
 toc = false
 Tags = []
-Categories = []
+Categories = ["uncategorized"]
 draft = true
 
 +++
