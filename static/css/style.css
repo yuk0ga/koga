@@ -11,7 +11,9 @@ p {
 a {text-decoration: none; color: #4ebf4a;}
 a:hover {text-decoration: underline; color: #555;}
 
-/* list.html */
+/*
+list.html
+*/
 
 .list-title {
   width: fit-content;
@@ -57,7 +59,9 @@ a:hover {text-decoration: underline; color: #555;}
   color: white;
 }
 
-/* single.html */
+/*
+single.html
+*/
 
 .single {
   background-color: white;
@@ -118,26 +122,53 @@ a:hover {text-decoration: underline; color: #555;}
   max-width: 700px;
 }
 
-/* Table of Contents */
+/*
+Table of Contents
+*/
 
 .toc {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-.toc > nav > ul {
+.toc > nav > ul,
+.toc > nav > ul > li > ul,
+.toc > nav > ul > li > ul > li > ul {
   list-style-type: decimal;
+  padding-left: 30px;
 }
 
+/* padding per h1 */
 .toc > nav > ul > li {
-  padding: 5px 0;
+  padding-top: 4px;
 }
 
-.toc > nav > ul > li > a {text-decoration: none; color: black;}
-.toc > nav > ul > li > a:visited {color: black;}
-.toc > nav > ul > li > a:hover {text-decoration: underline;}
+/* padding per h2, h3 */
+.toc > nav > ul > li > ul > li,
+.toc > nav > ul > li > ul > li > ul > li {
+  padding: 3px 0;
+}
 
-/* Subheadings */
+/* styling of all toc */
+.toc > nav > ul > li > a,
+.toc > nav > ul > li > ul > li > a,
+.toc > nav > ul > li > ul > li > ul > li > a {
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+  border-radius: 3px;
+}
+.toc > nav > ul > li > a:visited,
+.toc > nav > ul > li > ul > li > a:visited,
+.toc > nav > ul > li > ul > li > ul > li > a:visited {color: black;}
+
+.toc > nav > ul > li > a:hover,
+.toc > nav > ul > li > ul > li > a:hover,
+.toc > nav > ul > li > ul > li > ul > li > a:hover {text-decoration: underline; background-color: #eee;}
+
+/*
+Subheadings
+*/
 
 .content > h1 {
   font-size: 30px;
@@ -166,13 +197,17 @@ a:hover {text-decoration: underline; color: #555;}
   color: #3e9439;
 }
 
-/* paragraphs */
+/*
+paragraphs
+*/
 
 .content > p {
   padding: 0 10px;
 }
 
-/* terms.html */
+/*
+terms.html
+*/
 
 .terms {
   border-radius: 5px;
@@ -188,7 +223,9 @@ a:hover {text-decoration: underline; color: #555;}
   line-height: 25px;
 }
 
-/* mobile */
+/*
+mobile
+*/
 @media only screen and (max-width: 600px) {
 
   body {
@@ -199,7 +236,9 @@ a:hover {text-decoration: underline; color: #555;}
     font-size: 16px;
   }
 
-  /* list.html */
+  /*
+  list.html
+  */
 
   .list-title > h1 {
     color: white;
@@ -213,7 +252,9 @@ a:hover {text-decoration: underline; color: #555;}
     border-radius: 5px;
   }
 
-  /* single.html */
+  /*
+  single.html
+  */
   .single {
     background-color: white;
   }
@@ -252,7 +293,9 @@ a:hover {text-decoration: underline; color: #555;}
     margin-right: 10px;
   }
 
-  /* terms.html */
+  /*
+  terms.html
+  */
   .terms {
     margin: 10px auto;
   }
@@ -261,7 +304,9 @@ a:hover {text-decoration: underline; color: #555;}
     max-width: 100% !important;
   }
 
-  /* footer */
+  /*
+  footer
+  */
   /* .footer {
     border-top: 0px solid white !important;
     background-color: white;
@@ -275,7 +320,9 @@ a:hover {text-decoration: underline; color: #555;}
   }
 }
 
-/* images */
+/*
+images
+*/
 
 .img-80 > img {
   display: block;
@@ -293,7 +340,9 @@ a:hover {text-decoration: underline; color: #555;}
   margin: 5px auto 30px;
 }
 
-/* code */
+/*
+code
+*/
 pre > code {
   background: #eee !important;
   padding: 20px !important;
@@ -303,7 +352,9 @@ code > span {
   font-family:"Source Code Pro";
 }
 
-/* footer */
+/*
+footer
+*/
 .footer {
   margin-top: 50px;
   border-top: 2px solid #000;
