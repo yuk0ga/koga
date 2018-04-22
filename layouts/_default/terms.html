@@ -1,15 +1,14 @@
 {{ define "main" }}
 
-	<div class="list-title">
-		<h1>{{ .Title }}</h1>
-	</div>
-  {{ $data := .Data }}
-  {{ range .Site.Categories. }}
-		<div class="card">
-			<a href="{{ .Permalink }}">
-		    <h1 class="posttitle">{{ $value.Name | urlize }}">{{ $value.Name }}</h1>
-			</a>
-		</div>
-	{{ end }}
+  <div class="list-title">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="terms">
+    <ul>{{ $plural := .Data.Plural }}
+      {{ range $key, $value := .Data.Terms }}
+        <li><a href="/{{ $plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
+      {{ end }}
+    </ul>
+  </div>
 
 {{ end }}
