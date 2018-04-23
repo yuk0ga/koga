@@ -6,7 +6,7 @@
   <div class="terms">
     <ul>{{ $plural := .Data.Plural }}
       {{ range $key, $value := .Data.Terms }}
-        <li><a href="/{{ $plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
+        <li><a href="./{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
       {{ end }}
     </ul>
   </div>

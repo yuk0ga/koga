@@ -12,6 +12,28 @@ a {text-decoration: none; color: #4ebf4a;}
 a:hover {text-decoration: underline; color: #555;}
 
 /*
+nav.html
+*/
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto 0;
+  text-align: right;
+  max-width: 700px;
+}
+
+.navbar > li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 3px 5px;
+}
+
+.navbar > li > a {
+  color: #555;
+}
+
+/*
 list.html
 */
 
@@ -69,7 +91,7 @@ single.html
 }
 
 .header {
-  margin: 20px auto;
+  margin: 10px auto 20px;
   padding: 10px;
   border-bottom: 2px solid black;
   max-width: 700px;
@@ -129,6 +151,8 @@ Table of Contents
 .toc {
   border: 1px solid #ddd;
   border-radius: 5px;
+  margin: 10px auto;
+  max-width: 700px;
 }
 
 /* list style for h1 */
@@ -136,10 +160,15 @@ Table of Contents
   list-style-type: none;
 }
 
-/* list style for h2, h3 */
-.toc > nav > ul > li > ul,
-.toc > nav > ul > li > ul > li > ul {
+/* list style for h2 */
+.toc > nav > ul > li > ul {
   list-style-type: decimal;
+  padding-left: 50px;
+}
+
+/* list style for h3 */
+.toc > nav > ul > li > ul > li > ul {
+  list-style-type: square;
   padding-left: 30px;
 }
 
@@ -157,6 +186,27 @@ Table of Contents
 .toc > nav > ul > li > ul > li,
 .toc > nav > ul > li > ul > li > ul > li {
   padding: 3px 0;
+}
+
+/* styling of h1 */
+.toc > nav > ul > li > a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* styling of h2 */
+.toc > nav > ul > li > ul > li > a {
+  font-size: 16px;
+}
+
+/* styling of h3 */
+.toc > nav > ul > li > ul > li > ul > li > a {
+  font-size: 14px;
+}
+
+/* styling of h4 */
+.toc > nav > ul > li > ul > li > ul > li > ul > li > a {
+  font-size: 12px;
 }
 
 /* styling of all toc */
@@ -250,6 +300,24 @@ mobile
   }
 
   /*
+  nav.html
+  */
+
+  .navbar {
+    text-align: center;
+    max-width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+
+  .navbar > li > a {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /*
   list.html
   */
 
@@ -291,6 +359,12 @@ mobile
     border-radius: 0px;
     border-left: 0px;
     border-right: 0px;
+    margin: 10px 0;
+  }
+
+  .toc > nav > ul {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .content > h1 {

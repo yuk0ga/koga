@@ -16,12 +16,12 @@
       </ul>
     </div>
   </div>
+  {{ if and (gt .WordCount 200 ) (ne .Params.toc "false") }}
+    <div class="toc">
+        {{ .TableOfContents }}
+    </div>
+  {{ end }}
   <div class="content">
-    {{ if and (gt .WordCount 200 ) (ne .Params.toc "false") }}
-      <div class="toc">
-          {{ .TableOfContents }}
-      </div>
-    {{ end }}
     {{ .Content }}
     <br>
   </div>
