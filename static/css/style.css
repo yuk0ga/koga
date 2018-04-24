@@ -40,7 +40,7 @@ list.html
 
 .list-title {
   width: fit-content;
-  margin: auto;
+  margin: 15px auto 0;
   padding: 10px;
 
 }
