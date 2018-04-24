@@ -87,7 +87,7 @@ single.html
 */
 
 .single {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5px;
 }
 
@@ -143,6 +143,7 @@ single.html
 .content {
   margin: 10px auto;
   max-width: 700px;
+  border-bottom: 5px solid #4ebf4a;
 }
 
 /*
@@ -239,6 +240,7 @@ Subheadings
   margin-top: 30px;
   padding-left: 5px;
   border-bottom: 4px solid #4ebf4a;
+  border-radius: 2px;
   color: black;
   /* padding: 10px;
   background-color: #4ebf4a;
@@ -255,10 +257,29 @@ Subheadings
   margin-top: 30px;
   margin-left: 5px;
   border-left: 5px solid #4ebf4a;
+  border-radius: 2px;
 }
 
 .content > h4 {
   color: #3e9439;
+}
+
+.related {
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.related > ul > .card {
+  margin: 10px auto;
+}
+
+.related > h2 {
+  padding: 0 10px;
+  margin-bottom: 0;
+}
+
+.related > ul {
+  padding-left: 0;
 }
 
 /*
@@ -329,7 +350,7 @@ mobile
 
   .card {
     margin: 10px 0;
-    padding: 15px 20px;
+    padding: 15px 10px;
     background-color: white;
     border-radius: 5px;
   }
@@ -337,14 +358,16 @@ mobile
   /*
   single.html
   */
-  .single {
+
+  .header, .toc, .content, .related {
     background-color: white;
+    border-radius: 5px;
   }
 
   .header {
-    margin: 10px 10px 20px;
+    margin: 10px 0;
     padding: 15px 10px;
-    border-bottom: 2px solid black;
+    border-bottom: 0;
   }
 
   #tags, #categories {
@@ -354,13 +377,8 @@ mobile
 
   .content {
     margin: 10px 0;
-  }
-
-  .toc {
-    border-radius: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    margin: 10px 0;
+    padding: 1px 0;
+    border-bottom: 0;
   }
 
   .toc > nav > ul {
@@ -379,6 +397,15 @@ mobile
   .content > p, .content > h1, .content > h2, .content > h3, .content > h4 {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .related {
+    padding: 5px 15px;
+  }
+
+  .related > h2 {
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   /*
