@@ -125,8 +125,47 @@ index.html
 
 /* projects */
 
-.projects-contents > h1 {
+.projects > h1 {
   text-align: center;
+}
+
+.projects-contents {
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 30px;
+  align-items: stretch;
+}
+
+.grid-item {
+  border-radius: 5px;
+}
+
+.grid-item:hover {
+  background-color: #4ebf4a;
+}
+
+.grid-item > a {
+  color: black;
+  text-decoration: none;
+}
+
+.grid-item > a:hover {
+  color: white;
+}
+
+.grid-item > a > img {
+  border-radius: 5px;
+}
+
+.grid-item > a > img, .grid-item > a > h1, .grid-item > a > p {
+  display: block;
+  max-width: 80%;
+  margin: 10px auto;
 }
 
 
@@ -429,6 +468,7 @@ terms.html
   border-radius: 5px;
   border: 1px solid #fff;
   background-color: white;
+  min-height: 60%;
 }
 
 .terms > ul {
@@ -600,13 +640,16 @@ mobile
   /*
   footer
   */
-  /* .footer {
-    border-top: 0px solid white !important;
-    background-color: white;
-    border-radius: 5px;
-    padding: 5px;
-    margin-top: 10px !important;
-  } */
+  .footer {
+    margin-top: 0 !important;
+    border-top: 0px !important;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .footer > p {
+    display: inline-block;
+  }
 
   .footer > p > a {
     color: white;
