@@ -88,19 +88,25 @@ index.html
 }
 
 .bio-contents > h1, .bio-contents > p {
-  max-height: 60%;
-  width: 70%;
+  max-height: 100%;
+  width: 80%;
   margin: 30px auto;
   text-align: center;
 }
 
 .go-projects {
   display: block;
-  margin-top: 20px;
+  padding: 20px 0;
   text-align: center;
 }
 
-@media only screen and (min-height: 750px) {
+@media only screen and (min-width: 600px) {
+  .bio-contents > h1, .bio-contents > p {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 350px) and (min-height: 640px){
   .bio-contents {
     position: absolute;
     top: 45%;
@@ -108,10 +114,9 @@ index.html
     transform: translate(-50%, -50%);
     width: 100%;
   }
-  .bio-contents > h1, .bio-contents > p {
-    width: 80%;
-  }
+
   .go-projects {
+    padding: 0;
     position: absolute;
     left: 50%;
     bottom: 8%;
@@ -141,7 +146,7 @@ nav.html
 .navbar > li {
   display: inline-block;
   margin: 0 10px;
-  padding: 3px 2px;
+  padding: 0;
   font-weight: bold;
 }
 
@@ -156,7 +161,7 @@ list.html
 .list-title {
   width: fit-content;
   width: -moz-fit-content;
-  margin: 15px auto 0;
+  margin: 20px auto 0;
   padding: 10px;
 
 }
@@ -225,7 +230,9 @@ single.html
 #tags, #categories {
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 #tags > li, #categories > li {
@@ -494,10 +501,12 @@ mobile
     padding: 10px 0;
     border-radius: 5px;
     margin-top: 0px;
+    overflow: auto;
+    white-space: nowrap;
   }
 
   .navbar > li {
-    margin: 0 5px;
+    display: inline-block;
   }
 
   .navbar > li > a {
@@ -532,13 +541,13 @@ mobile
 
   .header {
     margin: 10px 0;
-    padding: 15px 10px;
+    padding: 10px 10px;
     border-bottom: 0;
   }
 
   #tags, #categories {
     display: block;
-    margin: 15px 0 0;
+    margin: 5px 0 0;
   }
 
   .content {
