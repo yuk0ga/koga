@@ -6,12 +6,12 @@
     <div class="taxonomies">
       <ul id="tags">
         {{ range .Params.tags }}
-        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"><i class="icon-tag-1"></i>{{ . }}</a></li>
+        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"><i class="icon-tags"></i>{{ . }}</a></li>
         {{ end }}
       </ul>
       <ul id="categories">
         {{ range .Params.categories }}
-        <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><i class="icon-folder-open"></i>{{ . }}</a></li>
+        <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><i class="icon-categories"></i>{{ . }}</a></li>
         {{ end }}
       </ul>
     </div>

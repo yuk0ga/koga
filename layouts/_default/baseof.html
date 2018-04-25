@@ -1,9 +1,11 @@
 {{ partial "header.html" . }}
 
-{{ partial "nav.html" . }}
+  {{ block "nav" . }}
+    {{ partial "nav.html" . }}
+  {{ end }}
 
-    {{ block "main" . }}
+  {{ block "main" . }}
 
-    {{ end }}
+  {{ end }}
 
 {{ partial "footer.html" . }}

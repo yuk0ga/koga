@@ -1,5 +1,6 @@
-html {
+html, body {
   font-family: sans-serif;
+  height: 100%;
 }
 
 p {
@@ -10,6 +11,111 @@ p {
 
 a {text-decoration: none; color: #4ebf4a;}
 a:hover {text-decoration: underline; color: #555;}
+
+
+/*
+index.html
+*/
+
+.hero {
+  height: 100%;
+  position: relative;
+}
+
+.hero-name {
+  max-width: 700px;
+  margin: 10px auto;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-name > h1 {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.social {
+  line-height: 30px;
+}
+
+.social > a {
+  color: black;
+  font-size: 20px;
+}
+
+/* .social > a:hover { font-size: 22px;} */
+.icon-github-circled:hover { color: grey;}
+.icon-twitter:hover { color: #1dcaff;}
+.icon-facebook:hover { color: #3B5998;}
+.icon-instagram:hover { color: #8a3ab9;}
+
+.go-bio {
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, -50%);
+}
+
+.go-bio > a, .go-projects > a {
+  color: black;
+  font-size: 40px;
+}
+
+
+/* bio */
+
+.bio, .projects {
+  width: 70%;
+  position: relative;
+  max-width: 700px;
+  margin: 10px auto;
+  min-height: 100%;
+  padding: 50px 0 0;
+  border-radius: 5px;
+}
+
+.profile-pic {
+  max-width: 40%;
+  border-radius: 50%;
+  border: 8px solid #4ebf4a;
+  display: block;
+  margin: auto;
+}
+
+.bio > h1, .bio > p {
+  max-height: 60%;
+  width: 70%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.go-projects {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-height: 750px) {
+  .go-projects {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* projects */
+
+.projects > h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
 
 /*
 nav.html
@@ -40,6 +146,7 @@ list.html
 
 .list-title {
   width: fit-content;
+  width: -moz-fit-content;
   margin: 15px auto 0;
   padding: 10px;
 
@@ -143,7 +250,6 @@ single.html
 .content {
   margin: 10px auto 25px;
   max-width: 700px;
-  border-bottom: 5px solid #ccc;
 }
 
 /*
@@ -270,6 +376,7 @@ related.html
 
 .see-also {
   width: fit-content;
+  width: -moz-fit-content;
 }
 
 .related {
@@ -331,6 +438,43 @@ mobile
   }
 
   /*
+  index.html
+  */
+
+  .hero {
+    border-radius: 5px;
+  }
+
+  .hero, .bio, .projects {
+    background-color: white;
+  }
+
+  .hero-name {
+    width: 100%;
+    top: 45%;
+  }
+
+  .hero-name > h1 {
+    font-size: 60px;
+  }
+
+  .go-bio {
+    bottom: 3%;
+  }
+
+  .bio, .projects {
+    width: 100%;
+  }
+
+  .bio > img {
+    border-width: 10px;
+  }
+
+  .bio > h1, .bio > p {
+    width: 80%;
+  }
+
+  /*
   nav.html
   */
 
@@ -344,7 +488,7 @@ mobile
   }
 
   .navbar > li {
-    margin: 0 8px;
+    margin: 0 5px;
   }
 
   .navbar > li > a {
@@ -489,6 +633,7 @@ footer
 */
 .footer {
   margin-top: 50px;
+  margin-bottom: 20px;
   border-top: 2px solid #000;
   text-align: center;
   font-weight: bold;
