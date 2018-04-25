@@ -82,12 +82,12 @@ index.html
 .profile-pic {
   max-width: 40%;
   border-radius: 50%;
-  border: 8px solid #4ebf4a;
+  border: 5px solid #4ebf4a;
   display: block;
   margin: auto;
 }
 
-.bio > h1, .bio > p {
+.bio-contents > h1, .bio-contents > p {
   max-height: 60%;
   width: 70%;
   margin: 30px auto;
@@ -101,6 +101,16 @@ index.html
 }
 
 @media only screen and (min-height: 750px) {
+  .bio-contents {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .bio-contents > h1, .bio-contents > p {
+    width: 80%;
+  }
   .go-projects {
     position: absolute;
     left: 50%;
@@ -111,9 +121,8 @@ index.html
 
 /* projects */
 
-.projects > h1 {
+.projects-contents > h1 {
   text-align: center;
-  margin-top: 0;
 }
 
 
@@ -466,8 +475,8 @@ mobile
     width: 100%;
   }
 
-  .bio > img {
-    border-width: 10px;
+  .profile-pic {
+    border-width: 0px;
   }
 
   .bio > h1, .bio > p {
