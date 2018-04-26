@@ -33,34 +33,17 @@
     <h1>Projects</h1>
     <div class="projects-contents">
       <div class="grid-container">
-        <div class="grid-item">
-          <a href="">
-            <img src="http://www.alfano.com/wp-content/uploads/2014/04/opus-portfolio-placeholder-300x300-300x300.png" alt="">
-            <h1>Project</h1>
-            <p>This is a project.</p>
-          </a>
-        </div>
-        <div class="grid-item">
-          <a href="">
-            <img src="http://www.alfano.com/wp-content/uploads/2014/04/opus-portfolio-placeholder-300x300-300x300.png" alt="">
-            <h1>Project</h1>
-            <p>This is a project.</p>
-          </a>
-        </div>
-        <div class="grid-item">
-          <a href="">
-            <img src="http://www.alfano.com/wp-content/uploads/2014/04/opus-portfolio-placeholder-300x300-300x300.png" alt="">
-            <h1>Project</h1>
-            <p>This is a project.</p>
-          </a>
-        </div>
-        <div class="grid-item">
-          <a href="">
-            <img src="http://www.alfano.com/wp-content/uploads/2014/04/opus-portfolio-placeholder-300x300-300x300.png" alt="">
-            <h1>Project</h1>
-            <p>This is a project.</p>
-          </a>
-        </div>
+        {{ range sort .Data.Pages }}
+        	{{ if eq .Type "project" }}
+          <div class="grid-item">
+            <a href="https://github.com/{{ .Site.Params.Social.Github }}/{{ .Params.reponame }}" target="_blank">
+              <img src="{{ .Params.Image }}" alt="">
+              <h1>{{ .Params.Name }}</h1>
+              <p>{{ .Params.Description }}</p>
+            </a>
+          </div>
+          {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>

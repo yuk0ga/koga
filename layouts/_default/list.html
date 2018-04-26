@@ -4,7 +4,9 @@
 		<h1>{{ .Title }}</h1>
 	</div>
 	{{ range .Data.Pages }}
-		{{ partial "li.html" . }}
+		{{ if eq .Type "post" }}
+			{{ partial "li.html" . }}
+		{{ end }}
 	{{ end }}
 
 {{ end }}
