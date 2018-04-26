@@ -690,7 +690,7 @@ pre > code {
   padding: 20px !important;
   border-radius: 5px;
 }
-code > span {
+pre > code, code > span {
   font-family:"Source Code Pro";
 }
 
