@@ -256,7 +256,7 @@ single.html
 
 .header {
   margin: 10px auto 20px;
-  padding: 10px;
+  padding: 10px 0 0;
   border-bottom: 2px solid black;
   max-width: 700px;
 }
@@ -266,7 +266,9 @@ single.html
 }
 
 .taxonomies {
-  margin: 10px 0 0;
+  padding: 5px 0 0;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 #tags, #categories {
@@ -585,12 +587,11 @@ mobile
 
   .header {
     margin: 10px 0;
-    padding: 10px 10px;
+    padding: 10px 10px 5px;
     border-bottom: 0;
   }
 
   #tags, #categories {
-    display: block;
     margin: 5px 0 0;
   }
 
