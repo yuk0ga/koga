@@ -1,18 +1,10 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
-
 name = "koga"
 license = "MIT"
-description = "theme for a personal website"
+licenselink = "https://github.com/yuk0ga/koga/blob/master/LICENSE.md"
+description = "simple theme made for experimenting with hugo"
 tags = ["minimal", "beginner"]
 min_version = "0.32.1"
 
 [author]
   name = "Yu Koga"
   homepage = "https://yuk0ga.github.io"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
