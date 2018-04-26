@@ -33,7 +33,9 @@
         	{{ if eq .Type "project" }}
           <div class="grid-item">
             <a href="https://github.com/{{ .Site.Params.Social.Github }}/{{ .Params.reponame }}" target="_blank">
-              <img src="{{ .Params.Image }}" alt="">
+              {{ with .Params.Image }}
+              <img src="{{ . }}" alt="">
+              {{ end }}
               <h1>{{ .Params.Name }}</h1>
               <p>{{ .Params.Description }}</p>
             </a>
