@@ -1,23 +1,40 @@
+{{ define "og" }}
+  {{ $baseUrl := .Site.BaseURL }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ .Title }}"/>
+  <meta property="og:description" content="{{ .Description }}">
+  {{ with .Params.image }}
+    <meta property="og:image" content="{{ $baseUrl }}{{ . }}"/>
+  {{ end }}
+{{ end }}
+
 {{ define "main" }}
+{{ $baseUrl := .Site.BaseURL }}
 <div class="single">
   <div class="header">
-    <p class="lastmod">{{ .Date.Format "January 2, 2006" }}</p>
-    <h1 class="posttitle">{{ .Title }}</h1>
-    <div class="taxonomies">
-      {{ with .Params.tags }}
-      <ul id="tags">
-        {{ range . }}
-        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"><i class="icon-tags"></i>{{ . }}</a></li>
+    {{ with .Params.image }}
+      <img src="{{ $baseUrl }}{{ . }}" alt="">
+    {{ end }}
+    <div class="header-text">
+      <p class="lastmod">{{ .Date.Format "January 2, 2006" }}</p>
+      <h1 class="posttitle">{{ .Title }}</h1>
+      <div class="taxonomies">
+        {{ with .Params.tags }}
+        <ul id="tags">
+          {{ range . }}
+          <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"><i class="icon-tags"></i>{{ . }}</a></li>
+          {{ end }}
+        </ul>
         {{ end }}
-      </ul>
-      {{ end }}
-      {{ with .Params.categories }}
-      <ul id="categories">
-        {{ range . }}
-        <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><i class="icon-categories"></i>{{ . }}</a></li>
+        {{ with .Params.categories }}
+        <ul id="categories">
+          {{ range . }}
+          <li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><i class="icon-categories"></i>{{ . }}</a></li>
+          {{ end }}
+        </ul>
         {{ end }}
-      </ul>
-      {{ end }}
+      </div>
     </div>
   </div>
   {{ if and (gt .WordCount 200 ) (ne .Params.toc "false") }}

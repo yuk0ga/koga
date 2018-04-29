@@ -2,6 +2,7 @@
 title = "{{ replace .TranslationBaseName "-" " " | title }}"
 date = {{ .Date }}
 Description = ""
+image = ""
 toc = false
 tags = []
 categories = ["uncategorized"]
