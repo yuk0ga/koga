@@ -5,7 +5,7 @@
   <meta property="og:title" content="{{ .Title }}"/>
   <meta property="og:description" content="{{ .Description }}">
   {{ with .Params.image }}
-    <meta property="og:image" content="{{ $baseUrl }}{{ . }}"/>
+    <meta property="og:image" content="{{ $baseUrl }}images/{{ . }}"/>
   {{ end }}
 {{ end }}
 
@@ -14,7 +14,7 @@
 <div class="single">
   <div class="header">
     {{ with .Params.image }}
-      <img src="{{ $baseUrl }}{{ . }}" alt="">
+      <img src="{{ $baseUrl }}images/{{ . }}" alt="">
     {{ end }}
     <div class="header-text">
       <p class="lastmod">{{ .Date.Format "January 2, 2006" }}</p>
