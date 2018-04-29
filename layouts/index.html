@@ -1,3 +1,11 @@
+{{ define "og" }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ .Title }}"/>
+  <meta property="og:description" content="{{ .Description }}"/>
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/favicon.png"/>
+{{ end }}
+
 {{ define "nav" }}
   <div></div>
 {{ end }}
