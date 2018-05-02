@@ -39,6 +39,7 @@
   </div>
   {{ if and (gt .WordCount 200 ) (ne .Params.toc "false") }}
     <div class="toc">
+        <h3>Contents</h3>
         {{ .TableOfContents }}
     </div>
   {{ end }}
